@@ -1,36 +1,46 @@
 module.exports = function(grunt) {
   // config task
   grunt.initConfig({
-    jshint: ['Gruntfile.js'],
+    jshint: {
+      client: [
+        'public/js/**/*.js',
+        '!public/js/vendor',
+      ],
+    },
     less: {
       compile: {
         files: {
           // destination : source
-          'build/css/compiled.css': 'public/css/**/*.less'
-        }
-      }
+          'build/css/compiled.css': 'public/css/**/*.less',
+        },
+      },
     },
     concat: {
       js: {
         files: {
-          'build/js/bundle.js': 'public/js/**/*.js'
-        }
-      }
+          'build/js/bundle.js': 'public/js/**/*.js',
+        },
+      },
     },
     uglify: {
       bundle: {
         files: {
-          'build/js/bundle.min.js': 'public/js/bundle.js'
-        }
-      }
+          'build/js/bundle.min.js': 'public/js/bundle.js',
+        },
+      },
     },
     sprite: {
       icons: {
         src: 'public/img/icons/*.png',
         dest: 'build/img/icons.png',
-        destCss: 'build/css/icons.css'
-      }
-    }
+        destCss: 'build/css/icons.css',
+      },
+    },
+    clean: {
+      js: 'build/js',
+      css: 'build/css',
+      less: 'public/**/*.css',
+    },
   });
 
   // load task plugin
@@ -39,6 +49,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // create task alias
   grunt.registerTask('default', ['jshint']);
