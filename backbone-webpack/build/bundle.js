@@ -34,7 +34,37 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "builds/";
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([]);
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+	__webpack_require__(2);
+	var Backbone = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"backbone\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	document.write('Welcome to my app! HELLO Xin');
+	console.log('Module app is loaded');
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	console.log('Module logger is loaded');
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	console.log('Module global is loaded');
+
+
+/***/ }
+/******/ ]);

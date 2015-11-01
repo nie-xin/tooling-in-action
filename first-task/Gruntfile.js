@@ -41,6 +41,11 @@ module.exports = function(grunt) {
       css: 'build/css',
       less: 'public/**/*.css',
     },
+    timestamp: {
+      options: {
+        file: '/test/timestamp',
+      },
+    },
   });
 
   // load task plugin
@@ -55,4 +60,12 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['jshint']);
   grunt.registerTask('assets', 'Concatenate and minify static JavaScript assets',
     ['concat:js', 'uglify:bundle']);
+  grunt.registerTask('timestamp', function() {
+    var options = this.options({
+      file: '.timestamp',
+    });
+    var timestamp = +new Date();
+    var contents = timestamp.toString();
+    grunt.file.write(options.file, contents);
+  });
 };
