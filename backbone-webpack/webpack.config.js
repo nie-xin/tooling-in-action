@@ -1,10 +1,19 @@
 module.exports = {
-  entry: './src/app.js',
+  entry: './src',
+  devtool: 'source-map',
 
   output: {
-    path: __dirname + 'build',
+    path: 'build',
     filename: 'bundle.js',
-    publicPath: '/build/',
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.html/,
+        loader: 'html',
+      },
+    ],
   },
 
   watch: true,
