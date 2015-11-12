@@ -12164,7 +12164,7 @@
 /* 96 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <button\n        type=\"button\"\n        class=\"navbar-toggle collapsed\"\n        data-toggle=\"collapse\"\n        data-target=\"#main_navbar\"\n        aria-expanded=\"false\">\n      Open\n      </button>\n    </div>\n\n    <div class=\"collapse navbar-collapse\" id=\"main_navbar\">\n      <ul class=\"nav navbar-nav\">\n        <li class=\"active\"><a href=\"#\">Home</a></li>\n        <li><a href=\"#\">Photos</a></li>\n      </ul>\n    </div>\n  </div>\n</nav>\n\n<div class=\"container\">\n  <h4>Bootstrap with webpack</h4>\n</div>";
+	module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <button\n        type=\"button\"\n        class=\"navbar-toggle collapsed\"\n        data-toggle=\"collapse\"\n        data-target=\"#main_navbar\"\n        aria-expanded=\"false\">\n      Open\n      </button>\n    </div>\n\n    <div class=\"collapse navbar-collapse\" id=\"main_navbar\">\n      <ul class=\"nav navbar-nav\">\n        <li class=\"active\"><a href=\"#\">Home</a></li>\n        <li><a href=\"albums.html\">Albums</a></li>\n        <li><a href=\"photos.html\">Photos</a></li>\n      </ul>\n    </div>\n  </div>\n</nav>\n\n<div class=\"container\">\n  <h4>Bootstrap with webpack</h4>\n</div>";
 
 /***/ }
 /******/ ]);
